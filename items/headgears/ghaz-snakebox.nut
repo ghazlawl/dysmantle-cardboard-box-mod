@@ -29,6 +29,7 @@ function OnModifiersRead() {
 function OnEquipped() {
     // Get the player.
     local player = Game_GetPrimaryPlayerActor();
+    // Game_AddActorNotification(player, "OnEquipped");
 
     // Hide the currently-equipped tool.
     Stage_SendStageObjectCommandWord(player, "show_and_hide_tool", false);
@@ -37,14 +38,17 @@ function OnEquipped() {
 function OnUnequipped() {
     // Get the player.
     local player = Game_GetPrimaryPlayerActor();
+    // Game_AddActorNotification(player, "OnUnequipped");
 
     // Show the currently-equipped tool.
     Stage_SendStageObjectCommandWord(player, "show_and_hide_tool", true);
+    Actor_QueueActionPlayAnimation(player, "tool_equip");
 }
 
 function OnUpdate(tdelta) {
     // Get the player.
     local player = Game_GetPrimaryPlayerActor();
+    // Game_AddActorNotification(player, "OnUpdate");
 
     // Hide the currently-equipped tool.
     Stage_SendStageObjectCommandWord(player, "show_and_hide_tool", false);
