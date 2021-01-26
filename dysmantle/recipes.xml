@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <array id="RECIPES">
+        <node id="GHAZ_SNAKEBOX"
+              category="CRAFTING"
+              level_requirement="12"
+              requires_materials="15xSCRAP_FABRIC,30xPLANTS"
+              output_item_id="items/headgears/ghaz-snakebox.nut"
+        />
+    </array>
+</root>
